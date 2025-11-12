@@ -14,8 +14,8 @@ const Hero = () => {
           objectFit: "cover"   
         }}
       />
-            <h1>I'm Rohan Gawade , BCA student from Goa.</h1>
-            <p>Hello, I am a BCA student from Goa persuring BCA in Don Basco Collage Panjim goa, I have 2-3 yr of Video Editing, Thumbnail Making, Logo Making experience with a youtube channel having 30K+ subscriber, Aiming to be a succesfull version of myself in comming few years.  </p>
+            <h1><span>I'm Rohan Gawade</span>, BCA student from Goa.</h1>
+            <p>Hello, I am a student from Goa persuring BCA in Don Basco Collage Panjim goa, I have 2-3 yr of Video Editing, Thumbnail Making, Logo Making experience with a youtube channel having 30K+ subscriber. This is my first React project. </p>
            
             <div className="Hero-action">
 

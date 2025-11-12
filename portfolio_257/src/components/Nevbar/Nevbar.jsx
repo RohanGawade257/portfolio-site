@@ -6,12 +6,11 @@ import "./Nevbar.css";
 const Nevbar = () => {
   return (
     <div className="Nevbar">
-      {/* 👇 added inline style to control logo size */}
       <img 
         src={Logo} 
         alt="Logo" 
         style={{
-          width: "60px",   // controls how tiny the logo is
+          width: "90px",   
           height: "auto",  
           display: "block", 
         }} 
