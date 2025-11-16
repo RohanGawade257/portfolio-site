@@ -33,4 +33,83 @@
     gap: 50px;
 }
 
+.about-para{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 24px;
+    font-weight: 500;
+}
 
+.about-skills{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-skill{
+    display: flex;
+    align-items: center;
+    /* remove gap: 50px; */
+}
+
+.about-skill p{
+        
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.about-skill hr{
+    flex: content;          
+    outline: none;
+    border: none;
+    height: 8px;
+    border-radius: 50px;
+    background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.28%);
+    margin: 40px;
+   
+}
+
+
+.about-achivements{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 80PX;
+
+}
+
+.about-achivement{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    transition: 0.5s;
+
+}
+
+.about-achivement h1{
+    font-size: 40px;
+    font-weight: 700;
+    background: linear-gradient(279deg , #DF8908 50.41%, #B415FF 90.25% );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-achivement p{
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.about-skill:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+    
+}
+
+.about-achivement:hover{
+    transform: scale(1.12);
+    transition: 0.5s;
+}

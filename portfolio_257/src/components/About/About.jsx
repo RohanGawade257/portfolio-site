@@ -30,15 +30,17 @@ const About = () => {
             <p>Since then, I’ve expanded my skills into video editing, graphic design, and full-stack development. I work with tools like Canva, Affinity, DaVinci Resolve, CapCut, and VS Code, and I’m currently learning Adobe After Effects, Premiere Pro, Photoshop, and Figma to refine my craft further. A fast learner, disciplined worker, and perfectionist at heart — I strive to combine technical precision with creativity in every project I take on.</p>
           </div>
           <div className="about-skills">
-            <div className="about-skill"><p>Video Editing</p><hr style={{ width: "50%" }} /></div>
-            <div className="about-skill"><p>Logo Designing</p><hr style={{ width: "50%" }} /></div>
-            <div className="about-skill"><p>Banner Designing</p><hr style={{ width: "50%" }} /></div>
-            <div className="about-skill"><p>Other Graphic Designs</p><hr style={{ width: "50%" }} /></div>
-            <div className="about-skill"><p>C Language</p><hr style={{ width: "50%" }} /></div>
-            <div className="about-skill"><p>HTML & CSS</p><hr style={{ width: "50%" }} /></div>
-            <div className="about-skill"><p>Java Script</p><hr style={{ width: "50%" }} /></div>
-            <div className="about-skill"><p>React JS</p><hr style={{ width: "50%" }} /></div>
-            <div className="about-skill"><p>Photography</p><hr style={{ width: "50%" }} /></div>
+            <div className="about-skills">
+               <div className="about-skill"><p>Video Editing</p><hr /></div>
+               <div className="about-skill"><p>Logo Designing</p><hr /></div>
+               <div className="about-skill"><p>Banner Designing</p><hr /></div>
+               <div className="about-skill"><p>Other Graphic Designs</p><hr /></div>
+               <div className="about-skill"><p>C Language</p><hr /></div>
+               <div className="about-skill"><p>HTML & CSS</p><hr /></div>
+               <div className="about-skill"><p>Java Script</p><hr /></div>
+               <div className="about-skill"><p>React JS</p><hr /></div>
+               <div className="about-skill"><p>Photography</p><hr /></div>
+            </div>
 
           </div>
         </div>
@@ -56,7 +58,8 @@ const About = () => {
         <hr />
         <div className="about-achivement">
           <h1>1st prize</h1>
-          <p>In inter collage Book Cover desgn</p>
+          <p>In inter collage Book Cover desgn</p> 
+        </div>
         <hr />
          <div className="about-achivement">
           <h1>32,000+</h1>
@@ -64,7 +67,7 @@ const About = () => {
           <hr />
          
         </div>
-        </div>
+        
       </div>
     </div>
   );
