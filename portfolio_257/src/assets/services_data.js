@@ -1,34 +1,29 @@
 const Services_Data = [
-    {
-        s_no:"01",
-        s_name:"Web design",
-        s_desc:"Web development is the process of building, programming..."
-    },
-    {
-        s_no:"02",
-        s_name:"Graphics design",
-        s_desc:"Web development is the process of building, programming..."
-    },
-    {
-        s_no:"03",
-        s_name:"Social media",
-        s_desc:"Web development is the process of building, programming..."
-    },
-    {
-        s_no:"04",
-        s_name:"App design",
-        s_desc:"Web development is the process of building, programming..."
-    },
-    {
-        s_no:"05",
-        s_name:"Digital marketing",
-        s_desc:"Web development is the process of building, programming..."
-    },
-    {
-        s_no:"06",
-        s_name:"Content writing",
-        s_desc:"Web development is the process of building, programming..."
-    },
-]
- 
+  {
+    s_no: "01",
+    s_name: "Video Editing",
+    s_desc: "I edit and enhance videos with smooth cuts, transitions, text, and sound design to make your content look professional and engaging.",
+  },
+  {
+    s_no: "02",
+    s_name: "Graphics Design",
+    s_desc: "I create modern and clean visual designs like posters, thumbnails, and social media graphics that grab attention and match your brand.",
+  },
+  {
+    s_no: "03",
+    s_name: "Web Design",
+    s_desc: "I build responsive and user-friendly websites using HTML, CSS, JavaScript, and React, optimized for both desktop and mobile.",
+  },
+  {
+    s_no: "04",
+    s_name: "Photo Editing",
+    s_desc: "I retouch and edit photos by adjusting colors, lighting, and details to make your images look sharp, clean, and professional.",
+  },
+  {
+    s_no: "05",
+    s_name: "Data Entry",
+    s_desc: "I accurately enter, organize, and manage data in spreadsheets or tools, ensuring everything is clean, structured, and easy to use.",
+  },
+];
+
 export default Services_Data;
