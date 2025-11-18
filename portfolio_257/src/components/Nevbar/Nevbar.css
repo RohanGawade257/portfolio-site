@@ -26,3 +26,22 @@
     transform: scale(1.05);
     
 }
+
+.nav-menu li{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+
+}
+
+.nav-menu img{
+    display: flex;
+    margin: auto;
+}
+
+.anchor{
+    text-decoration: none;
+    color: white;
+
+}

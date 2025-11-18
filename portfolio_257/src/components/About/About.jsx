@@ -5,7 +5,7 @@ import profile_image from "../../assets/my_image.jpg";
 
 const About = () => {
   return (
-    <div className="about">
+    <div id="about" className="about">
       <div className="about-title">
         <h1>About Me</h1>
         <img src={theme_pattern} alt="" />
@@ -17,9 +17,9 @@ const About = () => {
             src={profile_image}
             alt=""
             style={{
-              width: "250px",        // slightly bigger than Hero
+              width: "250px",        
               height: "400px",
-              objectFit: "cover"     // keeps correct proportions
+              objectFit: "cover"     
             }}
           />
         </div>
