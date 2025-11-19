@@ -81,3 +81,108 @@
     transition: 0.5s;
     
 }
+
+@media (max-width: 1024px){
+    .services{
+        margin: 60px auto;
+        gap: 60px;
+    }
+
+    .services-title h1{
+        font-size: 60px;
+    }
+
+    .services-container{
+        grid-template-columns: 1fr 1fr;  /* 2 per row */
+        gap: 30px;
+    }
+
+    .services-fromat{
+        padding: 40px;
+    }
+
+    .services-fromat h2{
+        font-size: 32px;
+    }
+
+    .services-fromat h3{
+        font-size: 24px;
+    }
+
+    .services-fromat p{
+        font-size: 20px;
+        line-height: 32px;
+    }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px){
+    .services{
+        margin: 50px auto;
+        padding: 0 16px;
+        gap: 40px;
+    }
+
+    .services-title{
+        margin-bottom: 10px;
+    }
+
+    .services-title h1{
+        font-size: 42px;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .services-title img{
+        width: 120px;
+        right: 10px;
+    }
+
+    .services-container{
+        grid-template-columns: 1fr;   /* 1 per row */
+        gap: 20px;
+        margin-bottom: 50px;
+    }
+
+    .services-fromat{
+        padding: 28px 22px;
+    }
+
+    .services-fromat h2{
+        font-size: 28px;
+    }
+
+    .services-fromat h3{
+        font-size: 20px;
+    }
+
+    .services-fromat p{
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .services-read-more{
+        margin-top: 12px;
+        gap: 12px;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 480px){
+    .services{
+        margin: 40px auto;
+        gap: 32px;
+    }
+
+    .services-title h1{
+        font-size: 34px;
+    }
+
+    .services-fromat{
+        padding: 22px 18px;
+    }
+
+    .services-fromat p{
+        font-size: 15px;
+    }
+}

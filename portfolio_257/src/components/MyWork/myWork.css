@@ -1,4 +1,4 @@
-.myWork {
+.myWork { 
   padding: 40px 0;
 }
 
@@ -19,8 +19,8 @@
 
 /* control image size */
 .myWork-container img {
-  width: 30%;           /* card width */
-  height: 30%;          /* fixed height */
+  width: 30%;             /* card width */
+  height: 30%;            /* this should NOT be % (fixed below) */
   object-fit: cover;      /* crop nicely, no stretching */
   border-radius: 10px;    /* optional */
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);  /* optional */
@@ -41,7 +41,7 @@
 }
 
 .myWork-title h1{
-     padding: 0px 30px ;
+    padding: 0px 30px ;
     font-size: 80px;
     font-weight: 600; 
 }
@@ -58,8 +58,8 @@
     border: 3px solid #ff00ff;
     border-radius: 10px;
     transition: 0.3s;
-
 }
+
 .myWork-show-more{
     display: flex;
     border-radius: 50px;
@@ -74,6 +74,87 @@
 }
 
 .myWork-show-more:hover{
-     border-color : #B415FF;
+    border-color : #B415FF;
     transform: scale(1.02);
+}
+
+ 
+/* Tablet breakpoint */
+@media (max-width: 1024px){
+    .myWork{
+        margin: 60px auto;
+        gap: 60px;
+    }
+
+    .myWork-title h1{
+        font-size: 60px;
+    }
+
+    .myWork-container img{
+        width: calc(50% - 16px);   /* 2 per row */
+    }
+
+    .myWork-show-more{
+        padding: 24px 50px;
+        font-size: 20px;
+    }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px){
+    .myWork{
+        margin: 50px auto;
+        padding: 30px 16px;
+        gap: 40px;
+    }
+
+    .myWork-title{
+        justify-content: center;
+        margin-bottom: 12px;
+    }
+
+    .myWork-title h1{
+        font-size: 42px;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .myWork-title img{
+        width: 120px;
+        right: 8px;
+    }
+
+    .myWork-container{
+        gap: 14px;
+    }
+
+    .myWork-container img{
+        width: 100%;              /* 1 per row */
+        max-width: 360px;
+    }
+
+    .myWork-show-more{
+        padding: 18px 32px;
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 480px){
+    .myWork{
+        margin: 40px auto;
+        gap: 32px;
+    }
+
+    .myWork-title h1{
+        font-size: 34px;
+    }
+
+    .myWork-show-more{
+        width: 100%;
+        max-width: 320px;
+        padding: 16px 0;
+        font-size: 16px;
+    }
 }

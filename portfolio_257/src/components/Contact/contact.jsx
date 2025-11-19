@@ -1,14 +1,58 @@
-import React from 'react'
-import './contact.css'
+import React, { useState } from "react";
+import "./contact.css";
 import theme_pattern from "../../assets/theme_pattern.svg";
 import Mail_icon from "../../assets/mail_icon.svg";
 import Location_icon from "../../assets/location_icon.svg";
 import likdin_icon from "../../assets/social.png";
 import insta_icon from "../../assets/insta logo.png";
 
-const Services = () => {
+const Contact = () => {
+  const [Result, setResult] = useState("");
+  const [showPopup, setShowPopup] = useState(false); // toast visibility
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+
+    const formData = new FormData(event.target);
+    formData.append("access_key", "f8089079-a819-42c7-b2e4-e595302cf14b");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("Form submitted successfully ✅");
+        event.target.reset();
+        setShowPopup(true); // show top alert
+
+        // auto-hide after 3 seconds
+        setTimeout(() => {
+          setShowPopup(false);
+        }, 3000);
+      } else {
+        console.error("Web3Forms error:", data);
+        setResult("Error submitting form ❌");
+      }
+    } catch (error) {
+      console.error("Network error:", error);
+      setResult("Network error ❌");
+    }
+  };
+
   return (
-    <div id='contact' className='contact'>
+    <div id="contact" className="contact">
+      {/* Top alert popup */}
+      {showPopup && (
+        <div className="top-alert">
+          <span>✅ Your message has been sent successfully!</span>
+        </div>
+      )}
+
       <div className="contact-title">
         <h1>Get in touch</h1>
         <img src={theme_pattern} alt="" />
@@ -66,27 +110,40 @@ const Services = () => {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="contact-right">
-          <label>Your Name</label>
-          <input type="text" placeholder="Enter your name" name="name" />
+        <div>
+          <form onSubmit={onSubmit} className="contact-right">
+            <label>Your Name</label>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              name="name"
+              required
+            />
 
-          <label>Your Email</label>
-          <input type="email" placeholder="Enter your email" name="email" />
+            <label>Your Email</label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              name="email"
+              required
+            />
 
-          <label>Write your message</label>
-          <textarea
-            name="message"
-            rows="8"
-            placeholder="Enter your message"
-          ></textarea>
+            <label>Write your message</label>
+            <textarea
+              name="message"
+              rows="8"
+              placeholder="Enter your message"
+              required
+            ></textarea>
 
-          <button type="submit" className="contact-submit">
-            Submit now
-          </button>
+            <button type="submit" className="contact-submit">
+              Submit now
+            </button>
+          </form>
         </div>
       </div>
     </div>
   );
 };
 
-export default Services;
+export default Contact;

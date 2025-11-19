@@ -1,10 +1,8 @@
 .footer{
-
     margin: 50px 70px;
     display: flex;
     flex-direction: column;
     gap: 30px;
-
 }
 
 .footer-top{
@@ -15,7 +13,6 @@
 .footer-top-left p{
     font-size: 20px;
     max-width: 400px;
-
 }
 
 .footer-top-right{
@@ -49,14 +46,12 @@
     background: linear-gradient(264deg, #df8908 -5.09%, #b415ff 106.28%);
     cursor: pointer;
     transition: 0.3s;
-
 }
 
 .footer-bottom{
     display: flex;
     justify-content: space-between;
     font-size: 18px;
-
 }
 
 .footer-bottom-right{
@@ -69,9 +64,99 @@
     border: solid white;
 }
 
-.footer-subscribe{
+.footer-subscribe:hover{
     transform: scale(1.1);
     transition: 0.3s;
-    
-    
+}
+
+
+
+@media (max-width: 1024px){
+    .footer{
+        margin: 40px auto 20px auto;
+        gap: 24px;
+    }
+
+    .footer-top-left p{
+        font-size: 18px;
+    }
+
+    .footer-bottom{
+        font-size: 16px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px){
+    .footer{
+        margin: 40px auto 10px auto;
+        padding: 0 16px;
+        gap: 24px;
+    }
+
+    .footer-top{
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .footer-top-left p{
+        max-width: 100%;
+        font-size: 16px;
+    }
+
+    .footer-top-right{
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .footer-email-input{
+        width: 95%;
+        padding: 14px 18px;
+        padding-right: 18px;
+        gap: 12px;
+        border-radius: 998px;
+    }
+
+    .footer-email-input input{
+        font-size: 16px;
+    }
+
+    .footer-subscribe{
+        width: 100%;
+        justify-content: center; 
+        padding: 14px 0px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .footer-bottom{
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+        font-size: 14px;
+    }
+
+    .footer-bottom-right{
+        gap: 20px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+}
+
+/* Extra small */
+@media (max-width: 480px){
+    .footer-top-left p{
+        font-size: 14px;
+    }
+
+    .footer-bottom{
+        font-size: 13px;
+    }
+
+    .footer-subscribe{
+        font-size: 15px;
+    }
 }
