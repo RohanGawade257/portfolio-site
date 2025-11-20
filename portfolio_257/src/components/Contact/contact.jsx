@@ -74,44 +74,43 @@ const Contact = () => {
               <p>offficialrohan257@gmail.com</p>
             </div>
 
-          <a href="https://www.instagram.com/rohan_crafts__257?igsh=ZzdkZjVoMDRlZ3E1" 
-              target="_blank"
-              rel="noreferrer"
-                 >  
-          <div className="contact-detail">
-            
-              <img
-                src={insta_icon}
-                alt=""
-                style={{
-                  width: "40px",
-                  height: "40px",
-                  borderRadius: "50%",
-                  objectFit: "cover",
-                }}
-              />
-              <p>rohan_crafts__257</p>
-            </div>
-            </a>
+         <a
+               href="https://www.instagram.com/rohan_crafts__257?igsh=ZzdkZjVoMDRlZ3E1"
+               target="_blank"
+               rel="noreferrer"
+               className="contact-detail"
+             >
+               <img
+                 src={insta_icon}
+                 alt="Instagram"
+                 style={{
+                   width: "40px",
+                   height: "40px",
+                   borderRadius: "50%",
+                   objectFit: "cover",
+                 }}
+               />
+               <p>rohan_crafts__257</p>
+             </a>
 
-            <a className="a1" href="https://www.linkedin.com/in/rohan-gawade-38a217313?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-            target="_blank"
-            rel="noreferrer"
-            >
-              <div className="contact-detail">
-              <img
-                src={likdin_icon}
-                alt=""
-                style={{
-                  width: "40px",
-                  height: "40px",
-                  borderRadius: "50%",
-                  objectFit: "cover",
-                }}
-              />
-              <p>Rohan Gawade</p>
-            </div>
-            </a>
+            <a
+               href="https://www.linkedin.com/in/rohan-gawade-38a217313?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+               target="_blank"
+               rel="noreferrer"
+               className="contact-detail a1"
+             >
+               <img
+                 src={likdin_icon}
+                 alt="LinkedIn"
+                 style={{
+                   width: "40px",
+                   height: "40px",
+                   borderRadius: "50%",
+                   objectFit: "cover",
+                 }}
+               />
+               <p>Rohan Gawade</p>
+             </a>
 
             <div className="contact-detail">
               <img src={Location_icon} alt="" />
