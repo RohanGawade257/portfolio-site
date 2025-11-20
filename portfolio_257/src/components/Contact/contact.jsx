@@ -74,7 +74,12 @@ const Contact = () => {
               <p>offficialrohan257@gmail.com</p>
             </div>
 
-            <div className="contact-detail">
+          <a href="https://www.instagram.com/rohan_crafts__257?igsh=ZzdkZjVoMDRlZ3E1" 
+              target="_blank"
+              rel="noreferrer"
+                 >  
+          <div className="contact-detail">
+            
               <img
                 src={insta_icon}
                 alt=""
@@ -87,8 +92,13 @@ const Contact = () => {
               />
               <p>rohan_crafts__257</p>
             </div>
+            </a>
 
-            <div className="contact-detail">
+            <a className="a1" href="https://www.linkedin.com/in/rohan-gawade-38a217313?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
+            rel="noreferrer"
+            >
+              <div className="contact-detail">
               <img
                 src={likdin_icon}
                 alt=""
@@ -101,6 +111,7 @@ const Contact = () => {
               />
               <p>Rohan Gawade</p>
             </div>
+            </a>
 
             <div className="contact-detail">
               <img src={Location_icon} alt="" />
