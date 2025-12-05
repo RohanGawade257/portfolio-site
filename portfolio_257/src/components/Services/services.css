@@ -93,7 +93,7 @@
     }
 
     .services-container{
-        grid-template-columns: 1fr 1fr;  /* 2 per row */
+        grid-template-columns: 1fr 1fr; 
         gap: 30px;
     }
 
@@ -115,7 +115,7 @@
     }
 }
 
-/* Mobile breakpoint */
+
 @media (max-width: 768px){
     .services{
         margin: 50px auto;
@@ -139,7 +139,7 @@
     }
 
     .services-container{
-        grid-template-columns: 1fr;   /* 1 per row */
+        grid-template-columns: 1fr;  
         gap: 20px;
         margin-bottom: 50px;
     }
@@ -167,7 +167,7 @@
     }
 }
 
-/* Extra small phones */
+
 @media (max-width: 480px){
     .services{
         margin: 40px auto;

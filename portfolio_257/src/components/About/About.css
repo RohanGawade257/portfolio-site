@@ -108,7 +108,7 @@
     transition: 0.5s;
 }
 
-/* Tablet Responsiveness */
+
 @media (max-width: 1024px){
     .about-title h1{
         font-size: 60px;
@@ -131,7 +131,7 @@
     }
 }
 
-/* Mobile Responsiveness */
+
 @media (max-width: 768px){
     .about{
         margin: 60px auto;
@@ -200,7 +200,7 @@
     }
 }
 
-/* Extra small devices */
+
 @media (max-width: 480px){
     .about{
         margin: 40px auto;

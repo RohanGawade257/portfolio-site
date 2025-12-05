@@ -6,7 +6,7 @@ import User_icon from '../../assets/user_icon.svg'
 const Services = () => {
   return (
     <div className='footer'>
-      {/* TOP: logo + text + email input */}
+    
       <div className="footer-top">
         <div className="footer-top-left">
           <img
@@ -34,10 +34,9 @@ const Services = () => {
         </div>
       </div>
 
-      {/* HORIZONTAL LINE */}
       <hr className="footer-line" />
 
-      {/* BOTTOM: © text + links */}
+    
       <div className="footer-bottom">
         <p className="footer-bottom-left">
           © 2025 Rohan Gawade Portfolio. All rights reserved.

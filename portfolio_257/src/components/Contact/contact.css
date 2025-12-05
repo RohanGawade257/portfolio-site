@@ -94,7 +94,7 @@
 .contact-right input{
     border: none;
     width: 700px;
-    height: 78; /* missing unit, fixed below */
+    height: 78;
     padding-left: 20px;
     border-radius: 4px;
     background: #32323c;
@@ -133,7 +133,7 @@
 
 .popup-overlay {
   position: fixed;
-  inset: 0; /* top, right, bottom, left = 0 */
+  inset: 0; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -169,7 +169,7 @@
   top: 16px;
   left: 50%;
   transform: translateX(-50%);
-  background: #16a34a; /* green-ish success */
+  background: #16a34a;
   color: white;
   padding: 10px 20px;
   border-radius: 999px;
@@ -180,7 +180,7 @@
   align-items: center;
   justify-content: center;
 
-  /* simple slide-down animation */
+ 
   animation: slideDown 0.3s ease-out;
 }
 
@@ -198,39 +198,37 @@
 
 
 
-/* ---------------------- ADDED / FIXED CSS STARTS HERE ---------------------- */
 
-/* Keep contact section centered and not too wide on large screens */
 .contact{
     max-width: 1200px;
     margin: 80px auto;
     padding: 0 20px;
 }
 
-/* Fix missing units for input height */
+
 .contact-right input{
     height: 78px;
     box-sizing: border-box;
 }
 
-/* Make inputs and textarea full-width relative to their container instead of fixed px */
+
 .contact-right input,
 .contact-right textarea{
     width: 100%;
 }
 
-/* To prevent them from stretching too wide on big desktop */
+
 .contact-right{
     width: 550px;
     max-width: 100%;
 }
 
-/* Contact section layout balance */
+
 .contact-section{
     align-items: flex-start;
 }
 
-/* Make clickable elements feel clickable */
+
 .contact-submit{
     font-weight: 600;
     box-shadow: 0 12px 30px rgba(0,0,0,0.35);
@@ -241,7 +239,6 @@
     box-shadow: 0 16px 40px rgba(0,0,0,0.45);
 }
 
-/* Icons inside contact-detail */
 .contact-detail img{
     width: 28px;
     height: 28px;
@@ -249,9 +246,7 @@
 
 
 
-/* RESPONSIVENESS */
 
-/* Tablet */
 @media (max-width: 1024px){
     .contact{
         margin: 60px auto;
@@ -282,7 +277,7 @@
     
 }
 
-/* Mobile */
+
 @media (max-width: 768px){
     .contact{
         margin: 50px auto;
@@ -351,7 +346,7 @@
     
 }
 
-/* Extra small phones */
+
 @media (max-width: 480px){
     .contact{
         margin: 40px auto;

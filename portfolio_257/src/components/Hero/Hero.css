@@ -83,7 +83,7 @@
 }
 
 
-/* Tablet breakpoint */
+
 @media (max-width: 1024px){
     .hero h1{
         width: 90%;
@@ -108,7 +108,7 @@
     }
 }
 
-/* Mobile breakpoint */
+
 @media (max-width: 768px){
     .hero{
         gap: 24px;
@@ -149,7 +149,7 @@
     }
 }
 
-/* Extra small phones */
+
 @media (max-width: 480px){
     .hero img{
         width: 190px;

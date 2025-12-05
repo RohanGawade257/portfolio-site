@@ -8,7 +8,7 @@ import insta_icon from "../../assets/insta logo.png";
 
 const Contact = () => {
   const [Result, setResult] = useState("");
-  const [showPopup, setShowPopup] = useState(false); // toast visibility
+  const [showPopup, setShowPopup] = useState(false);
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -28,9 +28,9 @@ const Contact = () => {
       if (data.success) {
         setResult("Form submitted successfully ✅");
         event.target.reset();
-        setShowPopup(true); // show top alert
+        setShowPopup(true);
 
-        // auto-hide after 3 seconds
+        
         setTimeout(() => {
           setShowPopup(false);
         }, 3000);
@@ -46,7 +46,7 @@ const Contact = () => {
 
   return (
     <div id="contact" className="contact">
-      {/* Top alert popup */}
+      
       {showPopup && (
         <div className="top-alert">
           <span>✅ Your message has been sent successfully!</span>
@@ -59,7 +59,7 @@ const Contact = () => {
       </div>
 
       <div className="contact-section">
-        {/* LEFT SIDE */}
+     
         <div className="contact-left">
           <h1>Let's talk</h1>
           <p>
@@ -119,7 +119,7 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* RIGHT SIDE */}
+        
         <div>
           <form onSubmit={onSubmit} className="contact-right">
             <label>Your Name</label>

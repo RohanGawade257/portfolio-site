@@ -75,7 +75,7 @@
     display: block;
     position: absolute;
     top: 20px;
-    right: 20px;            /* top-right inside the menu */
+    right: 20px;           
     width: 30px;
     cursor: pointer;
   }

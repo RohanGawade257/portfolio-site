@@ -2,7 +2,7 @@
   padding: 40px 0;
 }
 
-/* title part, optional tweak */
+
 .myWork-title {
   display: flex;
   align-items: center;
@@ -12,18 +12,17 @@
 
 .myWork-container {
   display: flex;
-  flex-wrap: wrap;        /* go to next line when full */
-  gap: 20px;              /* space between images */
+  flex-wrap: wrap;        
+  gap: 20px;              
   justify-content: center;
 }
 
-/* control image size */
 .myWork-container img {
-  width: 30%;             /* card width */
-  height: 30%;            /* this should NOT be % (fixed below) */
-  object-fit: cover;      /* crop nicely, no stretching */
-  border-radius: 10px;    /* optional */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);  /* optional */
+  width: 30%;            
+  height: 30%;            
+  object-fit: cover;      
+  border-radius: 10px;   
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);  
   cursor: pointer;
 }
 
@@ -79,7 +78,7 @@
 }
 
  
-/* Tablet breakpoint */
+
 @media (max-width: 1024px){
     .myWork{
         margin: 60px auto;
@@ -91,7 +90,7 @@
     }
 
     .myWork-container img{
-        width: calc(50% - 16px);   /* 2 per row */
+        width: calc(50% - 16px);  
     }
 
     .myWork-show-more{
@@ -100,7 +99,7 @@
     }
 }
 
-/* Mobile breakpoint */
+
 @media (max-width: 768px){
     .myWork{
         margin: 50px auto;
@@ -129,7 +128,7 @@
     }
 
     .myWork-container img{
-        width: 100%;              /* 1 per row */
+        width: 100%;              
         max-width: 360px;
     }
 
@@ -140,7 +139,7 @@
     }
 }
 
-/* Extra small phones */
+
 @media (max-width: 480px){
     .myWork{
         margin: 40px auto;
