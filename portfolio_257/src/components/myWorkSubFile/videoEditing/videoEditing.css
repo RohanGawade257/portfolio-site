@@ -1,0 +1,275 @@
+.video-editing-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    margin: 80px 170px;
+    overflow-x: hidden;
+}
+
+/* ---------------- HERO ---------------- */
+
+.ve-hero{
+    text-align: center;
+    max-width: 900px;
+    position: relative;
+    isolation: isolate;
+}
+
+.ve-hero h1{
+    font-size: 80px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    line-height: 1.1;
+}
+
+.ve-hero img{
+    position: relative;
+    transform: translate(130px, -90px);
+    z-index: -1;
+    width: 260px;
+    max-width: 100%;
+    height: auto;
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+.ve-hero p{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.65;
+    position: relative;
+    z-index: 1;
+}
+
+/* ---------------- COMMON SECTION ---------------- */
+
+.ve-section{
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.ve-section h2{
+    font-size: 42px;
+    font-weight: 600;
+    background: linear-gradient(279deg, #DF8908 50.41%, #B415FF 90.25%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+}
+
+.ve-section p{
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.75;
+}
+
+/* ---------------- TOOLS ---------------- */
+
+.ve-tools{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.ve-tools li{
+    list-style: none;
+    padding: 12px 22px;
+    border-radius: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    background:
+        linear-gradient(#000, #000) padding-box,
+        linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.28%) border-box;
+    transition: transform 0.25s ease;
+    will-change: transform;
+}
+
+.ve-tools li:hover{
+    transform: scale(1.05);
+}
+
+/* ---------------- WORK ---------------- */
+
+.ve-work-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.ve-work-card{
+    padding: 28px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    background:
+        linear-gradient(#000, #000) padding-box,
+        linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.28%) border-box;
+    transition: transform 0.25s ease;
+    will-change: transform;
+}
+
+.ve-work-card img{
+    width: 100%;
+    border-radius: 14px;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.ve-work-card p{
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.ve-work-card span{
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.ve-work-card:hover{
+    transform: scale(1.05);
+}
+
+/* ---------------- NOTE ---------------- */
+
+.ve-note{
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+/* ---------------- ACHIEVEMENTS ---------------- */
+
+.ve-section ul{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-left: 18px;
+}
+
+.ve-section ul li{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+/* ---------------- CTA ---------------- */
+
+.ve-cta{
+    text-align: center;
+    max-width: 800px;
+}
+
+.ve-cta h2{
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.ve-cta p{
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 1024px){
+    .video-editing-page{
+        margin: 60px 80px;
+    }
+
+    .ve-hero h1{
+        font-size: 60px;
+    }
+
+    .ve-hero img{
+        transform: translate(95px, -80px);
+        width: 220px;
+    }
+
+    .ve-section h2{
+        font-size: 34px;
+    }
+
+    .ve-work-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px){
+    .video-editing-page{
+        margin: 0;
+        padding: 60px 16px;
+        gap: 60px;
+    }
+
+    .ve-hero h1{
+        font-size: 42px;
+    }
+
+    .ve-hero img{
+        transform: translate(45px, -65px);
+        width: 180px;
+    }
+
+    .ve-hero p{
+        font-size: 18px;
+    }
+
+    .ve-section h2{
+        font-size: 28px;
+    }
+
+    .ve-section p{
+        font-size: 18px;
+    }
+
+    .ve-work-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .ve-tools{
+        justify-content: center;
+    }
+
+    .ve-work-card:hover{
+        transform: none; /* avoid accidental zoom on touch */
+    }
+}
+
+@media (max-width: 480px){
+    .ve-hero h1{
+        font-size: 32px;
+    }
+
+    .ve-hero img{
+        transform: translate(25px, -50px);
+        width: 140px;
+    }
+
+    .ve-section h2{
+        font-size: 24px;
+    }
+
+    .ve-section p{
+        font-size: 16px;
+    }
+
+    .ve-tools li{
+        font-size: 15px;
+        padding: 10px 18px;
+    }
+}

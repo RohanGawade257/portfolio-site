@@ -5,8 +5,14 @@ import Underline from "../../assets/nav_underline.svg";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Menu_open from "../../assets/menu_open.svg" 
 import Menu_close from "../../assets/menu_close.svg" 
+import { useLocation, useNavigate } from "react-router-dom";
+
+
 
 const Nevbar = () => {
+  const location = useLocation();
+const navigate = useNavigate();
+const isHome = location.pathname === "/";
   const [menu, setMenu] = useState("home");
   const menuRef = useRef();
 
@@ -41,15 +47,110 @@ const Nevbar = () => {
             className="nev-mod-close"
           />
         </li>
-        <li><AnchorLink className="anchor" offset={50} href="#home"><p onClick={() => setMenu("home")}>Home</p></AnchorLink>{menu === "home" && <img src={Underline} alt="" />}</li>
-        <li><AnchorLink className="anchor" offset={50} href="#about"><p onClick={() => setMenu("about")}>About me</p></AnchorLink>{menu === "about" && <img src={Underline} alt="" />}</li>
-        <li><AnchorLink className="anchor" offset={50} href="#services"><p onClick={() => setMenu("services")}>Services</p></AnchorLink>{menu === "services" && <img src={Underline} alt="" />}</li>
-        <li><AnchorLink className="anchor" offset={50} href="#work"><p onClick={() => setMenu("work")}>My Work</p></AnchorLink>{menu === "work" && <img src={Underline} alt="" />}</li>
-        <li><AnchorLink className="anchor" offset={50} href="#contact"><p onClick={() => setMenu("contact")}>Contact</p></AnchorLink>{menu === "contact" && <img src={Underline} alt="" />}</li>
+        <li>
+  {isHome ? (
+    <AnchorLink className="anchor" offset={50} href="#home">
+      <p onClick={() => setMenu("home")}>Home</p>
+    </AnchorLink>
+  ) : (
+    <p
+      className="anchor"
+      onClick={() => navigate("/")}
+    >
+      Home
+    </p>
+  )}
+  {menu === "home" && <img src={Underline} alt="" />}
+</li>
+
+        <li>
+  {isHome ? (
+    <AnchorLink className="anchor" offset={50} href="#about">
+      <p onClick={() => setMenu("about")}>About me</p>
+    </AnchorLink>
+  ) : (
+    <p
+      className="anchor"
+      onClick={() => {
+        setMenu("about");
+        navigate("/");
+      }}
+    >
+      About me
+    </p>
+  )}
+  {menu === "about" && <img src={Underline} alt="" />}
+</li>
+       
+        <li>
+  {isHome ? (
+    <AnchorLink className="anchor" offset={50} href="#services">
+      <p onClick={() => setMenu("services")}>Services</p>
+    </AnchorLink>
+  ) : (
+    <p
+      className="anchor"
+      onClick={() => navigate("/")}
+    >
+      Services
+    </p>
+  )}
+  {menu === "services" && <img src={Underline} alt="" />}
+</li>
+
+       <li>
+  {isHome ? (
+    <AnchorLink className="anchor" offset={50} href="#work">
+      <p onClick={() => setMenu("work")}>My Work</p>
+    </AnchorLink>
+  ) : (
+    <p
+      className="anchor"
+      onClick={() => {
+        setMenu("work");
+        navigate("/");
+      }}
+    >
+      My Work
+    </p>
+  )}
+  {menu === "work" && <img src={Underline} alt="" />}
+</li>
+
+        <li>
+  {isHome ? (
+    <AnchorLink className="anchor" offset={50} href="#contact">
+      <p onClick={() => setMenu("contact")}>Contact</p>
+    </AnchorLink>
+  ) : (
+    <p
+      className="anchor"
+      onClick={() => {
+        setMenu("contact");
+        navigate("/");
+      }}
+    >
+      Contact
+    </p>
+  )}
+  {menu === "contact" && <img src={Underline} alt="" />}
+</li>
+
 
       </ul>
 
-      <div className="nev-connect"><AnchorLink className="anchor" offset={50} href="#contact">Connect With Me</AnchorLink></div>
+      <div className="nev-connect">
+  {isHome ? (
+    <AnchorLink className="anchor" offset={50} href="#contact">
+      Connect With Me
+    </AnchorLink>
+  ) : (
+    <p className="anchor" onClick={() => navigate("/")}>
+      Connect With Me
+    </p>
+  )}
+</div>
+
     </div>
   );
 };

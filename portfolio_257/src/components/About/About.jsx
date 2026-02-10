@@ -26,8 +26,8 @@ const About = () => {
 
         <div className="about-right">
           <div className="about-para">
-            <p>I’m a first-year BCA student and a passionate creator who loves turning ideas into visuals and experiences — whether through design, video, or code. My creative journey began back in 8th grade during the lockdown, when I started designing thumbnails, logos, and editing videos for my YouTube channel, which grew to over 32k followers and featured more than 200+ videos. That experience shaped my eye for design, storytelling, and consistency.</p>
-            <p>Since then, I’ve expanded my skills into video editing, graphic design, and full-stack development. I work with tools like Canva, Affinity, DaVinci Resolve, CapCut, and VS Code, and I’m currently learning Adobe After Effects, Premiere Pro, Photoshop, and Figma to refine my craft further. A fast learner, disciplined worker, and perfectionist at heart — I strive to combine technical precision with creativity in every project I take on.</p>
+            <p>I’m a first year BCA student and a passionate creator who loves turning ideas into visuals and experiences whether through design, video, or code. My creative journey began back in 8th grade during the lockdown, when I started designing thumbnails, logos, and editing videos for my YouTube channel, which grew to over 32k followers and featured more than 200+ videos. That experience shaped my eye for design, storytelling, and consistency.</p>
+            <p>Since then, I’ve expanded my skills into video editing, graphic design, and full stack development. I work with tools like Canva, Affinity, DaVinci Resolve, CapCut, and VS Code, and I’m currently learning Adobe After Effects, Premiere Pro, Photoshop, and Figma to refine my craft further. A fast learner, disciplined worker, and perfectionist at heart. I strive to combine technical precision with creativity in every project I take on.</p>
           </div>
           <div className="about-skills">
             <div className="about-skills">
