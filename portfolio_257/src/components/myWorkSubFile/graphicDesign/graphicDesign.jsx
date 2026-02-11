@@ -1,6 +1,29 @@
 import React from "react";
 import "./graphicDesign.css";
 import theme_pattern from "../../../assets/theme_pattern.svg";
+
+import design1 from "../../../assets/design1.png";
+import design2 from "../../../assets/design2.png";
+import design3 from "../../../assets/design3.png";
+
+const designs = [
+  {
+    title: "Poster Design",
+    type: "Client Work",
+    image: design1
+  },
+  {
+    title: "Invite card design",
+    type: "Client Work",
+    image: design2
+  },
+  {
+    title: "Book Cover Design",
+    type: "Made During A Compitition",
+    image: design3
+  }
+];
+
 const GraphicDesign = () => {
   return (
     <div className="graphic-design-page">
@@ -36,23 +59,31 @@ const GraphicDesign = () => {
         </ul>
       </section>
 
-      {/* WORK */}
+      {/* SELECTED WORK */}
       <section className="gd-section">
-        <h2>Selected Work</h2>
+        <h2>My Work</h2>
+
         <div className="gd-work-grid">
-          <div className="gd-work-card">
-            <p>YouTube Thumbnail</p>
-            <span>High CTR focused design</span>
-          </div>
-          <div className="gd-work-card">
-            <p>Instagram Post</p>
-            <span>Brand-aligned visuals</span>
-          </div>
-          <div className="gd-work-card">
-            <p>Poster Design</p>
-            <span>Event & promotion creatives</span>
-          </div>
+          {designs.map((design, index) => (
+            <div key={index} className="gd-work-card">
+
+              <div className="gd-image-wrapper">
+                <img
+                  src={design.image}
+                  alt={design.title}
+                  className="gd-work-image"
+                />
+              </div>
+
+              <div className="gd-work-content">
+                <p>{design.title}</p>
+                <span>{design.type}</span>
+              </div>
+
+            </div>
+          ))}
         </div>
+
       </section>
 
       {/* ACHIEVEMENTS */}

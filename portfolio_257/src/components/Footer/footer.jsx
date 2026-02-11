@@ -25,13 +25,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="footer-top-right">
-          <div className="footer-email-input">
-            <img src={User_icon} alt="" />
-            <input type="email" placeholder="Enter your email" />
-          </div>
-          <div className="footer-subscribe">Subscribe</div>
-        </div>
+        
       </div>
 
       <hr className="footer-line" />
@@ -44,7 +38,7 @@ const Services = () => {
         <div className="footer-bottom-right">
           <p>Terms of Service</p>
           <p>Privacy Policy</p>
-          <p>Connect with me</p>
+     
         </div>
       </div>
     </div>

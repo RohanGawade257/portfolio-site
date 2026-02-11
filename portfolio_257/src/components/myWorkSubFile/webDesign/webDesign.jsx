@@ -1,22 +1,30 @@
 import React from "react";
 import "./webDesign.css";
 import theme_pattern from "../../../assets/theme_pattern.svg";
+import web1 from "../../../assets/web1.png";
+import web2 from "../../../assets/web2.png";
+import web3 from "../../../assets/web3.png";
+
+
 
 const websites = [
   {
     title: "Real-time Collaborative App",
     type: "React / Socket.io / Canvas",
-    link: "https://code-crafts-real-time-collaborative.vercel.app"
+    link: "https://code-crafts-real-time-collaborative.vercel.app",
+    image: web1
   },
   {
     title: "Portfolio Website",
     type: "React / Responsive",
-    link: "https://portfolio-site-nine-mu-51.vercel.app/"
+    link: "https://portfolio-site-nine-mu-51.vercel.app/",
+    image: web2
   },
   {
     title: "Expense Tracker",
     type: "React / State Management",
-    link: "https://expense-tracker-chi-five-64.vercel.app/"
+    link: "https://expense-tracker-chi-five-64.vercel.app/",
+    image: web3
   }
 ];
 
@@ -51,7 +59,7 @@ const WebDesign = () => {
           <li>HTML / CSS / JavaScript</li>
           <li>React.js</li>
           <li>Figma</li>
-          <li>WordPress / Webflow</li>
+          <li>MongoDB</li>
         </ul>
       </section>
 
@@ -68,8 +76,12 @@ const WebDesign = () => {
               rel="noopener noreferrer"
               className="wd-work-card"
             >
-              <p>{site.title}</p>
-              <span>{site.type}</span>
+              <img src={site.image} alt={site.title} className="wd-work-image" />
+
+              <div className="wd-work-content">
+                <p>{site.title}</p>
+                <span>{site.type}</span>
+              </div>
             </a>
           ))}
         </div>
