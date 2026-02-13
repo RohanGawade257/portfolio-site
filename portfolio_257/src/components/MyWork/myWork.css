@@ -1,159 +1,249 @@
 .myWork { 
   padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin: 80px 170px;
 }
 
+/* =========================
+   TITLE
+========================= */
 
 .myWork-title {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-bottom: 24px;
+  position: relative;
 }
 
-.myWork-container {
+.myWork-title h1 {
+  padding: 0px 30px;
+  font-size: 80px;
+  font-weight: 600; 
+}
+
+.myWork-title img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+/* =========================
+   CATEGORY LAYOUT
+========================= */
+
+.category-container {
   display: flex;
-  flex-wrap: wrap;        
-  gap: 20px;              
+  gap: 40px;
+  width: 100%;
   justify-content: center;
 }
 
-.myWork-container img {
-  width: 30%;            
-  height: 30%;            
-  object-fit: cover;      
-  border-radius: 10px;   
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);  
+.category-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.category-title {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 12px;
+  position: relative;
+
+  background: linear-gradient(264deg, #df7b08 -5.09%, #d815ff 106.28%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+.category-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #B415FF;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+/* =========================
+   CARD BASE
+========================= */
+
+.portfolio-card {
+  transition: 0.3s ease;
+  border-radius: 18px;
+  overflow: hidden;
+  text-decoration: none;
+  display: block;
+  background: #111;   /* 🔥 now all cards same look */
+  padding: 12px;
+}
+
+/* KEEP ORIGINAL IMAGE RATIO */
+
+.portfolio-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  transition: 0.35s ease;
+}
+
+/* REDUCED HOVER EFFECT */
+
+.portfolio-card:hover img {
+  transform: scale(1.02);  /* reduced from 1.04 */
+  box-shadow: 0 4px 12px rgba(180, 21, 255, 0.15); /* softer glow */
+}
+
+/* SUBTLE CARD LIFT */
+
+.portfolio-card:hover {
+  transform: translateY(-4px);
+}
+
+/* CARD CONTENT */
+
+.card-content {
+  padding: 14px 6px 6px 6px;
+}
+
+.card-content h3 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.card-content p {
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* =========================
+   SHOW MORE BUTTON
+========================= */
+
+.myWork-show-more {
+  display: flex;
+  border-radius: 50px;
+  gap: 15px;
+  border: 2px solid white;
+  padding: 30px 60px;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 80px;
+  transition: 0.4s;
   cursor: pointer;
 }
 
-.myWork{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.myWork-show-more:hover {
+  border-color: #B415FF;
+  transform: scale(1.02);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+  .myWork {
+    margin: 60px auto;
+    gap: 60px;
+  }
+
+  .myWork-title h1 {
+    font-size: 60px;
+  }
+
+  .category-container {
+    flex-wrap: wrap;
+  }
+
+  .category-column {
+    flex: 0 0 calc(50% - 20px);
+  }
+
+  .myWork-show-more {
+    padding: 24px 50px;
+    font-size: 20px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .myWork {
+    margin: 50px auto;
+    padding: 30px 16px;
+    gap: 40px;
+  }
+
+  .myWork-title {
     justify-content: center;
-    gap: 80px;
-    margin: 80px 170px;
+    margin-bottom: 12px;
+  }
+
+  .myWork-title h1 {
+    font-size: 42px;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .myWork-title img {
+    width: 120px;
+    right: 8px;
+  }
+
+  .category-container {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .category-column {
+    width: 100%;
+  }
+
+  .myWork-show-more {
+    padding: 18px 32px;
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
 }
 
-.myWork-title{
-    position: relative;
-}
+/* =========================
+   SMALL MOBILE
+========================= */
 
-.myWork-title h1{
-    padding: 0px 30px ;
-    font-size: 80px;
-    font-weight: 600; 
-}
+@media (max-width: 480px) {
 
-.myWork-title img{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-}
+  .myWork {
+    margin: 40px auto;
+    gap: 32px;
+  }
 
-.myWork-container img:hover{
-    transform: scale(1.05);
-    border: 3px solid #ff00ff;
-    border-radius: 10px;
-    transition: 0.3s;
-}
+  .myWork-title h1 {
+    font-size: 34px;
+  }
 
-.myWork-show-more{
-    display: flex;
-    border-radius: 50px;
-    gap: 15px;
-    border: 2px solid white;
-    padding: 30px 60px;
-    font-size: 22px;
-    font-weight: 500;
-    margin-bottom: 80px;
-    transition: 0.6s;
-    cursor: pointer;
-}
-
-.myWork-show-more:hover{
-    border-color : #B415FF;
-    transform: scale(1.02);
-}
-
- 
-
-@media (max-width: 1024px){
-    .myWork{
-        margin: 60px auto;
-        gap: 60px;
-    }
-
-    .myWork-title h1{
-        font-size: 60px;
-    }
-
-    .myWork-container img{
-        width: calc(50% - 16px);  
-    }
-
-    .myWork-show-more{
-        padding: 24px 50px;
-        font-size: 20px;
-    }
-}
-
-
-@media (max-width: 768px){
-    .myWork{
-        margin: 50px auto;
-        padding: 30px 16px;
-        gap: 40px;
-    }
-
-    .myWork-title{
-        justify-content: center;
-        margin-bottom: 12px;
-    }
-
-    .myWork-title h1{
-        font-size: 42px;
-        padding: 0 10px;
-        text-align: center;
-    }
-
-    .myWork-title img{
-        width: 120px;
-        right: 8px;
-    }
-
-    .myWork-container{
-        gap: 14px;
-    }
-
-    .myWork-container img{
-        width: 100%;              
-        max-width: 360px;
-    }
-
-    .myWork-show-more{
-        padding: 18px 32px;
-        font-size: 18px;
-        margin-bottom: 40px;
-    }
-}
-
-
-@media (max-width: 480px){
-    .myWork{
-        margin: 40px auto;
-        gap: 32px;
-    }
-
-    .myWork-title h1{
-        font-size: 34px;
-    }
-
-    .myWork-show-more{
-        width: 100%;
-        max-width: 320px;
-        padding: 16px 0;
-        font-size: 16px;
-    }
+  .myWork-show-more {
+    width: 100%;
+    max-width: 320px;
+    padding: 16px 75px;
+    font-size: 16px;
+  }
 }

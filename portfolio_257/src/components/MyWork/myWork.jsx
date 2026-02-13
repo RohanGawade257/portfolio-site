@@ -1,53 +1,132 @@
 import React from 'react'
 import './myWork.css'
 import theme_pattern from "../../assets/theme_pattern.svg";
-import mywork_data from '../../assets/mywork_data';
 import arrow_icon from "../../assets/arrow_icon.svg";
 import { useNavigate } from "react-router-dom";
+
+// 🎨 Graphics
+import render1 from "../../assets/PORSCHE.jpg";
+import render2 from "../../assets/taj.png";
+
+// 🌐 Website Screenshots
+import expenseTrackerSS from "../../assets/web1.png";
+import codeCraftsSS from "../../assets/web2.png";
 
 const Services = () => {
 
   const navigate = useNavigate();
 
-  // ✅ 2 Graphic (first 2)
-  const graphicWorks = mywork_data.slice(0, 2);
-
-  // ✅ 2 More (middle items – you can adjust index anytime)
-  const videoWorks = mywork_data.slice(7, 9);
-
-  // ✅ 2 More
-  const webWorks = mywork_data.slice(10, 12);
-
-  // Combine all 6
-  const topWorks = [...graphicWorks, ...videoWorks, ...webWorks];
-
   return (
     <div id='work' className='myWork'>
+
       <div className="myWork-title">
-        <h1>My latest work</h1>
+        <h1>My Latest Work</h1>
         <img src={theme_pattern} alt="" />
       </div>
 
-      <div className="myWork-container">
-        {topWorks.map((work, index) => {
-          return (
-            <img
-              key={index}
-              src={work.w_img}
-              alt={work.w_name}
-            />
-          )
-        })}
+      <div className="category-container">
+
+        {/* 🎨 GRAPHIC DESIGN */}
+        <div className="category-column">
+          <h2 className="category-title">Graphic Design</h2>
+
+          <div className="portfolio-card dark-card">
+            <img src={render1} alt="Porsche Poster" />
+            <div className="card-content">
+              <h3>Porsche Poster</h3>
+              <p>Automotive Design</p>
+            </div>
+          </div>
+
+          <div className="portfolio-card dark-card">
+            <img src={render2} alt="Taj Poster" />
+            <div className="card-content">
+              <h3>Taj Mahal Artwork</h3>
+              <p>Creative Poster Design</p>
+            </div>
+          </div>
+        </div>
+
+
+        {/* 🎬 VIDEO EDITING */}
+        <div className="category-column">
+          <h2 className="category-title">Video Editing</h2>
+
+          <a
+          href="https://youtu.be/KgY4x8D3El0"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="portfolio-card dark-card"
+        >
+          <img
+            src="https://img.youtube.com/vi/KgY4x8D3El0/hqdefault.jpg"
+            alt="Video 1"
+          />
+          <div className="card-content">
+            <h3>BMW Cinematic Edit</h3>
+            <p>Color Grading / Transitions</p>
+          </div>
+        </a>
+
+        <a
+          href="https://youtu.be/EatYikn2Ink"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="portfolio-card dark-card"
+        >
+          <img
+            src="https://img.youtube.com/vi/EatYikn2Ink/hqdefault.jpg"
+            alt="Video 2"
+          />
+          <div className="card-content">
+            <h3>Creative Cooking Edit</h3>
+            <p>Commercial Style</p>
+          </div>
+        </a>
+        </div>
+
+
+        {/* 🌐 WEB DEVELOPMENT */}
+        <div className="category-column">
+          <h2 className="category-title">Web Development</h2>
+
+          <a
+            href="https://expense-tracker-chi-five-64.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="portfolio-card dark-card"
+          >
+            <img src={expenseTrackerSS} alt="Expense Tracker" />
+            <div className="card-content">
+              <h3>Expense Tracker</h3>
+              <p>React / State Management</p>
+            </div>
+          </a>
+
+          <a
+            href="https://code-crafts-real-time-collaborative.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="portfolio-card dark-card"
+          >
+            <img src={codeCraftsSS} alt="Code Crafts" />
+            <div className="card-content">
+              <h3>Real-time Collaborative App</h3>
+              <p>React / Socket.io</p>
+            </div>
+          </a>
+        </div>
+
       </div>
 
       <div
         className="myWork-show-more"
         onClick={() => navigate("/work")}
-        style={{ cursor: "pointer" }}
       >
         <p>Show More</p>
         <img src={arrow_icon} alt="" />
       </div>
+
     </div>
   )
 }
