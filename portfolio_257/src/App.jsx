@@ -12,14 +12,18 @@ import GraphicDesign from "./components/myWorkSubFile/graphicDesign/graphicDesig
 import WebDesign from "./components/myWorkSubFile/webDesign/webDesign.jsx";
 import DataEntry from "./components/myWorkSubFile/dataEntry/dataEntry.jsx";
 import PhotoEditing from "./components/myWorkSubFile/photoEditing/photoEditing.jsx";
+import ScrollToTop from "./components/ScrollToTop";
+import Work from "./pages/Work";
+import WorkCategory from "./pages/WorkCategory";   // ✅ NEW
 
 const App = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
+
       <Nevbar />
 
       <Routes>
-        {/* Landing page */}
         <Route
           path="/"
           element={
@@ -29,18 +33,23 @@ const App = () => {
               <Services />
               <MyWork />
               <Contact />
-              <Footer />
             </>
           }
         />
 
-        {/* Service page */}
-        <Route path="/services/video-editing" element={<VideoEditing />}/>
+        {/* Work Section */}
+        <Route path="/work" element={<Work />} />
+        <Route path="/work/:category" element={<WorkCategory />} />  {/* ✅ NEW */}
+
+        {/* Old service pages (optional keep) */}
+        <Route path="/services/video-editing" element={<VideoEditing />} />
         <Route path="/services/graphics-design" element={<GraphicDesign />} />
         <Route path="/services/web-design" element={<WebDesign />} />
         <Route path="/services/photo-editing" element={<PhotoEditing />} />
         <Route path="/services/data-entry" element={<DataEntry />} />
       </Routes>
+
+      <Footer />
     </BrowserRouter>
   );
 };

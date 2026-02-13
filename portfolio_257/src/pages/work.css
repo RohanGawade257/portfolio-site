@@ -1,0 +1,24 @@
+.work-page {
+  padding: 120px 170px;
+  text-align: center;
+}
+
+.work-categories {
+  display: flex;
+  gap: 40px;
+  margin-top: 60px;
+  justify-content: center;
+}
+
+.work-card {
+  background: #1f1f1f;
+  padding: 40px;
+  width: 300px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.work-card:hover {
+  transform: translateY(-10px);
+}

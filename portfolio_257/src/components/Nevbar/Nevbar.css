@@ -2,8 +2,26 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 20px 170px ;
+
+    /* 👇 FIXED HEADER */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: #161513;
+
+    /* 👇 Instead of margin, use padding */
+    padding: 10px 170px;
 }
+
+/* 👇 Push entire website content below navbar */
+body {
+  padding-top: 110px; /* Adjust slightly if needed */
+}
+
+/* ================= MENU ================= */
 
 .nev-menu{
     display: flex;
@@ -24,7 +42,6 @@
 
 .nev-connect:hover {
     transform: scale(1.05);
-    
 }
 
 .nev-menu li{
@@ -32,7 +49,6 @@
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
-
 }
 
 .nev-menu li img{
@@ -40,13 +56,10 @@
     margin: auto;
 }
 
-
 .anchor{
     text-decoration: none;
     color: white;
-
 }
-
 
 .nev-mod-open{
     display: none;
@@ -56,15 +69,18 @@
     display: none;
 }
 
+/* ================= MOBILE ================= */
+
 @media(max-width:768px){ 
 
-
     .nevbar{
-     margin: 20px 50px;
+        padding: 2px 50px;
     }
+
     .nev-connect{
         display: none;  
     }
+
     .nev-mod-open{
         display: block;
         position: fixed;
@@ -72,13 +88,13 @@
     }
 
     .nev-mod-close {
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 20px;           
-    width: 30px;
-    cursor: pointer;
-  }
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;           
+        width: 30px;
+        cursor: pointer;
+    }
 
     .nev-menu {
         position: fixed;
@@ -89,11 +105,9 @@
         background-color: #1f0016;
         width: 350px;
         height: 100%;
-        z-index: 2;
+        z-index: 2000;
         transition: right 0.5s ;
         right: -350px;
-
-
     }
 
     .nev-menu li{
@@ -102,7 +116,6 @@
         padding-left: 100px;
         flex-direction: row;
         gap: 20px;
-        
     }
 }
 
