@@ -5,7 +5,6 @@ import "./workCategory.css";
 
 const WorkCategory = () => {
   const { category } = useParams();
-
   const categoryData = workData[category];
 
   if (!categoryData) {
@@ -18,10 +17,23 @@ const WorkCategory = () => {
 
       <div className="category-container">
         {categoryData.items.map((item, index) => (
-          <div key={index} className="category-item">
-            <img src={item.image} alt={item.name} />
-            <p>{item.name}</p>
-          </div>
+          item.url ? (
+            <a
+              key={index}
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="category-item"
+            >
+              <img src={item.image} alt={item.name} />
+              <p>{item.name}</p>
+            </a>
+          ) : (
+            <div key={index} className="category-item">
+              <img src={item.image} alt={item.name} />
+              <p>{item.name}</p>
+            </div>
+          )
         ))}
       </div>
     </div>

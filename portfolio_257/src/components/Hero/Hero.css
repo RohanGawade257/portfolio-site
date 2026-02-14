@@ -171,3 +171,119 @@
         padding: 14px 24px;
     }
 }
+
+/* Blur Background */
+.blur-bg {
+  filter: blur(8px);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Overlay */
+.resume-overlay {
+  position: fixed;
+  top: 6vh;          /* 👈 Leaves top 15% empty */
+  left: 0;
+  width: 100%;
+  height: 100%;       /* 👈 Remaining visible area */
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 20px;
+}
+
+
+
+/* Modal */
+.resume-modal {
+  background: #111;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 95%;
+  max-height: 95%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Resume Image */
+.resume-image {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* Action Buttons */
+.resume-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.resume-actions button {
+  padding: 12px 25px;
+  border-radius: 40px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.resume-actions button:hover {
+  border-color: #B415FF;
+  transform: scale(1.05);
+}
+
+/* Tablet Optimization */
+@media (max-width: 1024px) and (min-width: 769px) {
+
+  .resume-overlay {
+    top: 10vh;        /* Better spacing for tablet */
+    height: 90vh;     /* Prevent overflow */
+    padding: 30px;
+  }
+
+  .resume-modal {
+    max-width: 85%;
+    max-height: 85vh;
+  }
+
+  .resume-image {
+    max-height: 65vh;
+  }
+
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .resume-overlay {
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .resume-modal {
+    padding: 15px;
+  }
+
+  .resume-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .resume-actions button {
+    width: 100%;
+  }
+}

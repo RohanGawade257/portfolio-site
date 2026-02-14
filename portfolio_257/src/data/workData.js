@@ -1,6 +1,7 @@
 import mywork_data from "../assets/mywork_data";
+import video_work_data from "../assets/video_work_data";
+import web_work_data from "../assets/web_work_data";
 
-// Example structure
 const workData = {
   "graphic-design": {
     title: "Graphic Design Projects",
@@ -12,26 +13,20 @@ const workData = {
 
   "video-editing": {
     title: "Video Editing Projects",
-    items: [
-      {
-        name: "Cinematic Reel",
-        image: "ADD_IMAGE_PATH_HERE",
-      },
-      {
-        name: "YouTube Edit",
-        image: "ADD_IMAGE_PATH_HERE",
-      },
-    ],
+    items: video_work_data.map((item) => ({
+      name: item.name,
+      image: item.image,
+      url: item.url,   // ✅ ADD THIS
+    })),
   },
 
   "web-design": {
     title: "Web Design Projects",
-    items: [
-      {
-        name: "Portfolio Website",
-        image: "ADD_IMAGE_PATH_HERE",
-      },
-    ],
+    items: web_work_data.map((item) => ({
+      name: item.name,
+      image: item.image,
+      url: item.url,   // ✅ ADD THIS
+    })),
   },
 };
 

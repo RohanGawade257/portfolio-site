@@ -17,17 +17,17 @@ const Work = () => {
 
       <div className="work-categories">
 
-        {/* VIDEO EDITING */}
+        {/* WEB DESIGN */}
         <div 
           className="work-card"
-          onClick={() => navigate("/work/video-editing")}
+          onClick={() => navigate("/work/web-design")}
         >
           <div className="work-image">
-            <img src={videoThumb} alt="Video Editing" />
+            <img src={webThumb} alt="Web Design" />
           </div>
           <div className="work-content">
-            <h2>Video Editing</h2>
-            <p>Reels, Cinematics, YouTube Projects</p>
+            <h2>Web Design</h2>
+            <p>Modern & Responsive Websites</p>
           </div>
         </div>
 
@@ -45,17 +45,17 @@ const Work = () => {
           </div>
         </div>
 
-        {/* WEB DESIGN */}
+         {/* VIDEO EDITING */}
         <div 
           className="work-card"
-          onClick={() => navigate("/work/web-design")}
+          onClick={() => navigate("/work/video-editing")}
         >
           <div className="work-image">
-            <img src={webThumb} alt="Web Design" />
+            <img src={videoThumb} alt="Video Editing" />
           </div>
           <div className="work-content">
-            <h2>Web Design</h2>
-            <p>Modern & Responsive Websites</p>
+            <h2>Video Editing</h2>
+            <p>Reels, Cinematics, YouTube Projects</p>
           </div>
         </div>
 

@@ -1,6 +1,7 @@
 import React from "react";
 import "./graphicDesign.css";
 import theme_pattern from "../../../assets/theme_pattern.svg";
+import { useNavigate } from "react-router-dom";
 
 import design1 from "../../../assets/design1.png";
 import design2 from "../../../assets/design2.png";
@@ -13,18 +14,21 @@ const designs = [
     image: design1
   },
   {
-    title: "Invite card design",
+    title: "Invite Card Design",
     type: "Client Work",
     image: design2
   },
   {
     title: "Book Cover Design",
-    type: "Made During A Compitition",
+    type: "Made During a Competition",
     image: design3
   }
 ];
 
 const GraphicDesign = () => {
+
+  const navigate = useNavigate(); // ✅ IMPORTANT
+
   return (
     <div className="graphic-design-page">
 
@@ -34,7 +38,7 @@ const GraphicDesign = () => {
         <img src={theme_pattern} alt="" />
         <p>
           I design clean, modern, and visually strong graphics that help brands
-          stand out — from social media creatives to thumbnails and posters.
+          stand out from social media creatives to thumbnails and posters.
         </p>
       </section>
 
@@ -82,6 +86,14 @@ const GraphicDesign = () => {
 
             </div>
           ))}
+        </div>
+
+        {/* SHOW MORE BUTTON */}
+        <div
+          className="myWork-show-more"
+          onClick={() => navigate("/work/graphic-design")}
+        >
+          Show More
         </div>
 
       </section>

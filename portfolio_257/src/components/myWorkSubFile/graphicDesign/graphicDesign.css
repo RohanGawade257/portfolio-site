@@ -93,7 +93,7 @@
 }
 
 .gd-tools li:hover{
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 /* ---------------- WORK ---------------- */
@@ -182,6 +182,27 @@
     font-weight: 500;
     margin-top: 10px;
     line-height: 1.6;
+}
+
+.myWork-show-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  gap: 15px;
+  border: 2px solid white;
+  padding: 20px 40px;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 50px auto 80px auto;
+  transition: 0.4s;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.myWork-show-more:hover {
+  border-color: #B415FF;
+  transform: scale(1.02);
 }
 
 /* ---------------- RESPONSIVE ---------------- */

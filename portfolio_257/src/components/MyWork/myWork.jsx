@@ -9,8 +9,8 @@ import render1 from "../../assets/PORSCHE.jpg";
 import render2 from "../../assets/taj.png";
 
 // 🌐 Website Screenshots
-import expenseTrackerSS from "../../assets/web1.png";
-import codeCraftsSS from "../../assets/web2.png";
+import expenseTrackerSS from "../../assets/web3.png";
+import codeCraftsSS from "../../assets/web1.png";
 
 const Services = () => {
 

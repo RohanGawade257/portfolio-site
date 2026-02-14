@@ -1,11 +1,11 @@
 import React from "react";
 import "./webDesign.css";
 import theme_pattern from "../../../assets/theme_pattern.svg";
+import { useNavigate } from "react-router-dom";
+
 import web1 from "../../../assets/web1.png";
 import web2 from "../../../assets/web2.png";
 import web3 from "../../../assets/web3.png";
-
-
 
 const websites = [
   {
@@ -29,6 +29,9 @@ const websites = [
 ];
 
 const WebDesign = () => {
+
+  const navigate = useNavigate(); // ✅ required
+
   return (
     <div className="web-design-page">
 
@@ -37,7 +40,7 @@ const WebDesign = () => {
         <h1>Web Design</h1>
         <img src={theme_pattern} alt="" />
         <p>
-          I create responsive, user-friendly websites that are optimized for
+          I create responsive, user friendly websites that are optimized for
           both desktop and mobile, helping brands have a professional online presence.
         </p>
       </section>
@@ -63,7 +66,7 @@ const WebDesign = () => {
         </ul>
       </section>
 
-      {/* WORK (CONNECTED LIKE VIDEO EDITING) */}
+      {/* WORK */}
       <section className="wd-section">
         <h2>My Work</h2>
 
@@ -85,6 +88,15 @@ const WebDesign = () => {
             </a>
           ))}
         </div>
+
+        {/* SHOW MORE BUTTON */}
+        <div
+          className="myWork-show-more"
+          onClick={() => navigate("/work/web-design")}
+        >
+          Show More
+        </div>
+
       </section>
 
       {/* ACHIEVEMENTS */}
@@ -92,7 +104,7 @@ const WebDesign = () => {
         <h2>Achievements</h2>
         <ul>
           <li>Designed multiple responsive websites</li>
-          <li>Experience with both React and WordPress</li>
+          <li>Experience with both React and Jawascript</li>
           <li>Improved client engagement through clean UI/UX</li>
         </ul>
       </section>

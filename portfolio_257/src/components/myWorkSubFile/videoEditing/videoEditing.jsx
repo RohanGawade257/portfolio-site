@@ -1,6 +1,7 @@
 import React from 'react'
 import './videoEditing.css'
 import theme_pattern from "../../../assets/theme_pattern.svg";
+import { useNavigate } from "react-router-dom";
 
 const videos = [
   {
@@ -21,6 +22,9 @@ const videos = [
 ];
 
 function VideoEditing() {
+
+  const navigate = useNavigate();
+
   return (
     <div className="video-editing-page">
 
@@ -77,6 +81,25 @@ function VideoEditing() {
             </a>
           ))}
         </div>
+
+        {/* SHOW MORE BUTTON */}
+        <div
+          className="myWork-show-more"
+          onClick={() => navigate("/work/video-editing")}
+        >
+          Show More
+        </div>
+
+      </section>
+
+      {/* ACHIEVEMENTS */}
+      <section className="ve-section">
+        <h2>Achievements</h2>
+        <ul>
+          <li>Built a YouTube channel to 32K+ subscribers (all edits done by me)</li>
+          <li>Completed 200+ professional video edits</li>
+          <li>Handled full video production editing, pacing, transitions & thumbnails</li>
+        </ul>
       </section>
 
       {/* CTA */}
@@ -87,11 +110,10 @@ function VideoEditing() {
           let’s connect.
         </p>
       </section>
-      
+
       <br />
     </div>
   )
 }
-
 
 export default VideoEditing
