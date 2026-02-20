@@ -3,16 +3,16 @@ import "./webDesign.css";
 import theme_pattern from "../../../assets/theme_pattern.svg";
 import { useNavigate } from "react-router-dom";
 
-import web1 from "../../../assets/web1.png";
+import web6 from "../../../assets/web6.png";
 import web2 from "../../../assets/web2.png";
 import web3 from "../../../assets/web3.png";
 
 const websites = [
   {
-    title: "Real-time Collaborative App",
-    type: "React / Socket.io / Canvas",
-    link: "https://code-crafts-real-time-collaborative.vercel.app",
-    image: web1
+    title: "Smart College Website, Renewed the Don basco panjim collage Website",
+    type: "React / Ai Assistant",
+    link: "https://smart-college-website-ai.vercel.app/",
+    image: web6
   },
   {
     title: "Portfolio Website",
@@ -21,9 +21,9 @@ const websites = [
     image: web2
   },
   {
-    title: "Expense Tracker",
-    type: "React / State Management",
-    link: "https://expense-tracker-chi-five-64.vercel.app/",
+    title: "Community For Gamers With AI Bot Support",
+    type: "React / Socket.io / Ai Assistant",
+    link: "https://gamer-hub-ai.vercel.app/login",
     image: web3
   }
 ];
@@ -106,6 +106,7 @@ const WebDesign = () => {
           <li>Designed multiple responsive websites</li>
           <li>Experience with both React and Jawascript</li>
           <li>Improved client engagement through clean UI/UX</li>
+          <li>Customized AI Chat Assistant Implimentation</li>
         </ul>
       </section>
 

@@ -9,8 +9,8 @@ import render1 from "../../assets/PORSCHE.jpg";
 import render2 from "../../assets/taj.png";
 
 // 🌐 Website Screenshots
-import expenseTrackerSS from "../../assets/web3.png";
-import codeCraftsSS from "../../assets/web1.png";
+import expenseTrackerSS from "../../assets/web6.png";
+import codeCraftsSS from "../../assets/web7.png";
 
 const Services = () => {
 
@@ -91,28 +91,28 @@ const Services = () => {
           <h2 className="category-title">Web Development</h2>
 
           <a
-            href="https://expense-tracker-chi-five-64.vercel.app/"
+            href="https://smart-college-website-ai.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="portfolio-card dark-card"
           >
-            <img src={expenseTrackerSS} alt="Expense Tracker" />
+            <img src={expenseTrackerSS} alt="Smart Collage" />
             <div className="card-content">
-              <h3>Expense Tracker</h3>
-              <p>React / State Management</p>
+              <h3>Smart Collage Website</h3>
+              <p>React / Ai Chat Support</p>
             </div>
           </a>
 
           <a
-            href="https://code-crafts-real-time-collaborative.vercel.app/"
+            href="https://gamer-hub-ai.vercel.app/login"
             target="_blank"
             rel="noopener noreferrer"
             className="portfolio-card dark-card"
           >
-            <img src={codeCraftsSS} alt="Code Crafts" />
+            <img src={codeCraftsSS} alt="Gamer Hub" />
             <div className="card-content">
-              <h3>Real-time Collaborative App</h3>
-              <p>React / Socket.io</p>
+              <h3>Gamer Hub Site</h3>
+              <p>React / Socket.io / Ai Support</p>
             </div>
           </a>
         </div>
