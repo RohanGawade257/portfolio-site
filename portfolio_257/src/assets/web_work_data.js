@@ -30,7 +30,7 @@ const web_work_data = [
   {
     name: "Real-Time Collaborative Code Editor",
     image: web1,
-    url: "https://code-crafts-real-time-collaborative.onrender.com/",
+    url: "https://code-crafts-real-time-collaborative.vercel.app",
   },
   {
     name: "Expense Tracker Web App",

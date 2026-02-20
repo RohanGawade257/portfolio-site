@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 import web6 from "../../../assets/web6.png";
 import web2 from "../../../assets/web2.png";
-import web3 from "../../../assets/web3.png";
+import web7 from "../../../assets/web7.png";
 
 const websites = [
   {
@@ -24,7 +24,7 @@ const websites = [
     title: "Community For Gamers With AI Bot Support",
     type: "React / Socket.io / Ai Assistant",
     link: "https://gamer-hub-ai.vercel.app/login",
-    image: web3
+    image: web7
   }
 ];
 
