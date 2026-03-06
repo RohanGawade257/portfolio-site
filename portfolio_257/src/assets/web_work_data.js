@@ -5,6 +5,8 @@ import web4 from "./web4.png";
 import web5 from "./web5.png";
 import web6 from "./web6.png";
 import web7 from "./web7.png";
+import web8 from "./web8.png";
+import web9 from "./web9.png";
 
 const web_work_data = [
   {
@@ -41,6 +43,16 @@ const web_work_data = [
     name: "Personal Portfolio Website",
     image: web2,
     url: "https://portfolio-site-nine-mu-51.vercel.app/",
+  },
+  {
+    name: "Clothing Website",
+    image: web8,
+    url: "https://customice-frontend-site.vercel.app/",
+  },
+  {
+    name: "Bakery Shop Website",
+    image: web9,
+    url: "https://mama-bakery-wunt.vercel.app/",
   },
 ];
 

@@ -4,7 +4,7 @@ import theme_pattern from "../../../assets/theme_pattern.svg";
 import { useNavigate } from "react-router-dom";
 
 import web6 from "../../../assets/web6.png";
-import web2 from "../../../assets/web2.png";
+import web9 from "../../../assets/web9.png";
 import web7 from "../../../assets/web7.png";
 
 const websites = [
@@ -15,10 +15,10 @@ const websites = [
     image: web6
   },
   {
-    title: "Portfolio Website",
+    title: "Bakery Shop Website",
     type: "React / Responsive",
-    link: "https://portfolio-site-nine-mu-51.vercel.app/",
-    image: web2
+    link: "https://mama-bakery-wunt.vercel.app/",
+    image: web9
   },
   {
     title: "Community For Gamers With AI Bot Support",

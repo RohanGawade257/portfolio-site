@@ -11,6 +11,8 @@ import render2 from "../../assets/taj.png";
 // 🌐 Website Screenshots
 import expenseTrackerSS from "../../assets/web6.png";
 import codeCraftsSS from "../../assets/web7.png";
+import BackerySite from "../../assets/web9.png";
+
 
 const Services = () => {
 
@@ -113,6 +115,19 @@ const Services = () => {
             <div className="card-content">
               <h3>Gamer Hub Site</h3>
               <p>React / Socket.io / Ai Support</p>
+            </div>
+          </a>
+
+          <a
+            href="https://mama-bakery-wunt.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="portfolio-card dark-card"
+          >
+            <img src={BackerySite} alt="Gamer Hub" />
+            <div className="card-content">
+              <h3>Backery Shop Site</h3>
+              <p>React / TailwindCSS / Admin panel</p>
             </div>
           </a>
         </div>
